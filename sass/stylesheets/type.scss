@@ -1,13 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-$number_size: 72px;
+$number_size: 32px;
+$main_size: 24px;
 
 $sub_title_size: 18px;
 $sub_title_weight: 400;
 
 $counter_timer_size: 30px;
 
-$font_colour: #FFF;
+$title_color: #FFF;
+$font_colour: #4d4d4d;
 
 @mixin transition($duration) {
   -webkit-transition: all $duration ease;
@@ -21,12 +23,14 @@ html, body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-h1, h2, h3, h4, h5, a, p {
-	color: $font_colour;
+h1, h2, h3, h4, h5 {
+	color: $title_color;
+	font-size: $main_size;
 }
 
 a {
 	@include transition(0.3s);
+	color: $font_colour;
 	display: block;
 	text-decoration: none;
 	font-size: $sub_title_size;
@@ -43,6 +47,7 @@ a {
 p {
 	font-size: $number_size;
 	font-weight: $sub_title_weight;
+	color: $font_colour;
 }
 
 .preload {

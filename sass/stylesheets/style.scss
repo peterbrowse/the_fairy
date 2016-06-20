@@ -1,4 +1,7 @@
 $bg-color: #ed1b2e;
+$item_bg_color: #FFFFFF;
+
+$main_padding: 20px;
 
 @import 'reset';
 @import 'type';
@@ -38,8 +41,31 @@ html, body {
 
 .content {
 	display: none;
+	
+	h2 {
+		cursor: pointer;
+	}
 }
 
 .content_controller {
+	padding: $main_padding;
 	
+	h1 {
+		margin-bottom: $main_padding;
+	}
+	
+	.item {
+		border-radius: 10px;
+		background-color: $item_bg_color;
+		margin-bottom: $main_padding / 2;
+		padding: $main_padding;
+		cursor: pointer;
+		
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none; 
+	}
 }

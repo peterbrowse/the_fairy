@@ -7,6 +7,8 @@ var express 			= require('express')
 ,   dotenv				= require('dotenv').config({silent: true});
 
 var app = express();
+var server = require('http').createServer(app);  
+var io = require('socket.io')(server);
 
 if ('development' == app.get('env')) {
 	app.use(sassMiddleware({
@@ -33,8 +35,12 @@ app.use(express.static(__dirname + '/public'));
 app.use(morgan('combined'));
 
 //Set up routes
-require('./app/routes.js')(app);
+require('./app/routes.js')(app, io);
 
 var listener = app.listen(process.env.PORT || 8080, function () {
-	console.log('Example app listening on port ' + listener.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
+	console.log('Express listening on port ' + listener.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
+});
+
+var io_listen = server.listen(3000, function() {
+	console.log('Socket.io listening on port ' + io_listen.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
 });

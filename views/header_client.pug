@@ -9,10 +9,13 @@ html
 		
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		
+		script(type="text/javascript",src="https://cdn.socket.io/socket.io-1.4.5.js")
 		script(type="text/javascript",src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js")
 		script(type="text/javascript",src="/js/modernizr.js")
 		script(type="text/javascript",src="/js/soundmanager2-jsmin.js")
 		script(type="text/javascript",src="/js/pxloader-all.min.js")
+		script.
+			var io_path = !{JSON.stringify(io_path)};
 		script(type="text/javascript",src="/js/application.js")
 			
 	body

@@ -1,17 +1,17 @@
 var loaded = false;
 var audio_count = 1;
 var animated = false;
-
-var static_images = [
-	];
-
-if(Modernizr.audio.mp3) {
-	var audio = [
-	];
-} else {
-	var audio = [
-	];
-}
+	
+var audio = [
+	'../audio/ape.mp3',
+	'../audio/bowhead-whale.mp3',
+	'../audio/cat.mp3',
+	'../audio/cow.mp3',
+	'../audio/duck.mp3',
+	'../audio/ding.mp3',
+	'../audio/lion.mp3',
+	'../audio/pig.mp3'
+];
 
 soundManager.setup({
 	url: "/js/swf/",
@@ -19,9 +19,20 @@ soundManager.setup({
 	preferFlash: false,
 	flashVersion: 9,
 	useHighPerformance: true,
-	debugMode: true,
+	debugMode: false,
 	debugFlash: false,
 	flashLoadTimeout: 1000
+});
+
+var socket = io.connect(io_path);
+socket.on('connect', function(data) {
+    socket.emit('join', 'client');
+});
+
+socket.on('command', function(command) {
+	console.log('Play: ' + command);
+	
+	play_sound(command);
 });
 
 $(document).ready(function(){
@@ -33,7 +44,10 @@ $(document).ready(function(){
 		}
 	});
 	
-	init_scene();
+	$('.activate_button').on('click', function() {
+		play_sound('ding');
+		$(this).find('h2').text('Ready');
+	});
 });
 
 //SOUND & PRELOAD
@@ -54,23 +68,20 @@ function preload() {
 	
 	//Audio
 	audio.forEach(function(item){
-		loader.add(new PxLoaderSound('audio_'+audio_count,item));
-		audio_count = audio_count + 1;
-	});
-	
-	//Static Images	
-	static_images.forEach(function(item) {
-		loader.add(new PxLoaderImage(item));
+		var sound_title = item.split('../audio/').join('');
+		sound_title = sound_title.replace('.mp3', '');
+		
+		loader.add(new PxLoaderSound(sound_title,item));
 	});
 	
 	loader.addProgressListener(function(e) { 
-	    console.log(e.resource.getName()); 
+	    //console.log(e.resource.getName()); 
 	}); 
 	
 	loader.addCompletionListener(function(e) {
 		loaded = true;
 		
-		//init_scene();
+		init_scene();
 	});
 	
 	loader.start();
@@ -89,7 +100,7 @@ function start_sounds() {
 }
 
 function play_sound(track_num) {
-	var track = soundManager.getSoundById('burp_'+track_num);
+	var track = soundManager.getSoundById(track_num);
 	track.play();
 }
 

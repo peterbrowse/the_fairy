@@ -78,28 +78,31 @@ html, body {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif; }
 
-h1, h2, h3, h4, h5, a, p {
-  color: #FFF; }
+h1, h2, h3, h4, h5 {
+  color: #FFF;
+  font-size: 24px; }
 
 a {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: #4d4d4d;
   display: block;
   text-decoration: none;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 1px;
-  border-bottom: 2px #FFF solid;
+  border-bottom: 2px #4d4d4d solid;
   cursor: pointer; }
   @media (max-width: 480px) {
     a {
       font-size: 14px; } }
 
 p {
-  font-size: 72px;
-  font-weight: 400; }
+  font-size: 32px;
+  font-weight: 400;
+  color: #4d4d4d; }
 
 .preload .inner p {
   font-size: 18px; }
@@ -128,3 +131,22 @@ html, body {
 
 .content {
   display: none; }
+  .content h2 {
+    cursor: pointer; }
+
+.content_controller {
+  padding: 20px; }
+  .content_controller h1 {
+    margin-bottom: 20px; }
+  .content_controller .item {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+    padding: 20px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
