@@ -1,0 +1,41 @@
+$bg-color: #ed1b2e;
+
+@import 'reset';
+@import 'type';
+
+html, body {
+	background-color: $bg-color;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.content, .preload {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+.preload {
+	.inner {
+		display: table;
+		width: 100%;
+		height: 100%;
+		
+		p {
+			display: table-cell;
+			vertical-align: middle;
+		}
+		
+		.preload_text {
+			
+		}
+	}
+}
+
+.content {
+	display: none;
+}
