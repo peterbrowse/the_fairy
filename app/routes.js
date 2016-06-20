@@ -7,7 +7,7 @@ var io_path = '';
 
 module.exports = function(app, io) {
 	if ('production' == app.get('env')) {
-		io_path = "http://the_fairy.herokuapp.com:3000";
+		io_path = "http://the-fairy.herokuapp.com:3000";
 	} else {
 		io_path = "http://localhost:3000";
 	}
