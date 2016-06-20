@@ -2,11 +2,10 @@
 
 //Requires
 
-
 //Variables
 
 
-module.exports = function(app) {
+module.exports = function(app, io) {
 	app.get('/', function (req, res) {
 		res.render('index', {
 			title: 'The Fairy - Controller'
@@ -18,4 +17,13 @@ module.exports = function(app) {
 			title: 'The Fairy'
 		});
 	});
+	
+/*
+	io.on('connection', function (socket) {
+	  socket.emit('news', { hello: 'world' });
+	  socket.on('my other event', function (data) {
+	    console.log(data);
+	  });
+	});
+*/
 }
