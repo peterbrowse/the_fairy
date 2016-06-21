@@ -41,6 +41,6 @@ var listener = app.listen(process.env.PORT || 8080, function () {
 	console.log('Express listening on port ' + listener.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
 });
 
-var io_listen = server.listen(5000, function() {
+var io_listen = server.listen(process.env.PORT || 3000, function() {
 	console.log('Socket.io listening on port ' + io_listen.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
 });
