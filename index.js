@@ -11,6 +11,9 @@ var app = express();
 var server = require('http').createServer(app);  
 var io = io.listen(server);
 
+io.set('heartbeat timeout', 120000); 
+io.set('heartbeat interval', 1000);
+
 if ('development' == app.get('env')) {
 	app.use(sassMiddleware({
 		src: __dirname + '/sass',
