@@ -30,7 +30,7 @@ socket.on('connect', function(data) {
 });
 
 socket.on('command', function(command) {
-	console.log('Play: ' + command);
+	//console.log('Play: ' + command);
 	
 	play_sound(command);
 });

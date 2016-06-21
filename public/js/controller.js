@@ -7,7 +7,7 @@ $(document).ready(function(){
 	$('.item').on('click', function(e){
 		var play_sound = $(this).find('p').attr('alt');
 		
-		console.log(play_sound);
+		//console.log(play_sound);
 		
 		socket.emit('command', play_sound);
 	});
