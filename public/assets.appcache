@@ -1,0 +1,23 @@
+CACHE MANIFEST
+# This is a comment.
+# Cache manifest version 0.0.1
+# If you change the version number in this comment,
+# the cache manifest is no longer byte-for-byte
+# identical.
+
+CACHE:
+/js/soundmanager2-jsmin.js
+/js/pxloader-all.min.js
+/js/application.js
+/audio/ape.mp3
+/audio/bowhead-whale.mp3
+/audio/cat.mp3
+/audio/cow.mp3
+/audio/ding.mp3
+/audio/duck.mp3
+/audio/lion.mp3
+/audio/pig.mp3
+
+NETWORK:
+https://cdn.socket.io/socket.io-1.4.5.js
+https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js
