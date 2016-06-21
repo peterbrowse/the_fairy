@@ -6,10 +6,10 @@
 var io_path = '';
 
 module.exports = function(app, io) {
-	var port_num = 3000;
+	var port_num = process.env.PORT || 8080;
 	
 	if ('production' == app.get('env')) {
-		io_path = "http://the-fairy.herokuapp.com";
+		io_path = "http://the-fairy.herokuapp.com" + port_num;
 	} else {
 		io_path = "http://localhost:" + port_num;
 	}

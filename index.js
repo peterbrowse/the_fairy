@@ -4,11 +4,12 @@ var express 			= require('express')
 ,   sassMiddleware		= require('node-sass-middleware')
 ,	errorhandler		= require('errorhandler')
 ,	morgan 				= require('morgan')
-,   dotenv				= require('dotenv').config({silent: true});
+,   dotenv				= require('dotenv').config({silent: true})
+,	io					= require('socket.io');
 
 var app = express();
 var server = require('http').createServer(app);  
-var io = require('socket.io')(server);
+var io = io.listen(server);
 
 if ('development' == app.get('env')) {
 	app.use(sassMiddleware({
@@ -37,10 +38,12 @@ app.use(morgan('combined'));
 //Set up routes
 require('./app/routes.js')(app, io);
 
+/*
 var listener = app.listen(process.env.PORT || 8080, function () {
 	console.log('Express listening on port ' + listener.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
 });
+*/
 
-var io_listen = server.listen(process.env.PORT || 3000, function() {
-	console.log('Socket.io listening on port ' + io_listen.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
+var io_listen = server.listen(process.env.PORT || 8080, function() {
+	console.log('Server listening on port ' + io_listen.address().port + ' in ' + process.env.NODE_ENV + ' mode.');
 });
