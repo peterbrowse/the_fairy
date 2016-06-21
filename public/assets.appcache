@@ -1,14 +1,11 @@
 CACHE MANIFEST
 # This is a comment.
-# Cache manifest version 0.0.2
+# Cache manifest version 0.0.4
 # If you change the version number in this comment,
 # the cache manifest is no longer byte-for-byte
 # identical.
 
 CACHE:
-/js/soundmanager2-jsmin.js
-/js/pxloader-all.min.js
-/js/application.js
 /audio/ape.mp3
 /audio/bowhead-whale.mp3
 /audio/cat.mp3

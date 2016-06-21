@@ -8,7 +8,7 @@ var express 			= require('express')
 ,	io					= require('socket.io');
 
 var app = express();
-var server = require('http').createServer(app);  
+var server = require('http').createServer(app);
 var io = io.listen(server);
 
 io.set('heartbeat timeout', 120000); 
