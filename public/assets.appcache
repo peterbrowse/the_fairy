@@ -1,7 +1,7 @@
 CACHE MANIFEST
-# rev ?v=4
+# rev ?v=5
 # This is a comment.
-# Cache manifest version 0.0.4
+# Cache manifest version 0.0.5
 # If you change the version number in this comment,
 # the cache manifest is no longer byte-for-byte
 # identical.
@@ -44,6 +44,8 @@ CACHE:
 /audio/tk/not_now_trev.mp3
 /audio/tk/prochristmas2.mp3
 /audio/tk/timetogoofflist.mp3
+/audio/tk/drum_roll_sound_effect.mp3
+/audio/tk/slow_clapping_sound_effect.mp3
 
 NETWORK:
 *

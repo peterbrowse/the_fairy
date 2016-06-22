@@ -39,7 +39,9 @@ var audio = [
 	'../audio/tk/freeyourself.mp3',
 	'../audio/tk/not_now_trev.mp3',
 	'../audio/tk/prochristmas2.mp3',
-	'../audio/tk/timetogoofflist.mp3'
+	'../audio/tk/timetogoofflist.mp3',
+	'../audio/tk/drum_roll_sound_effect.mp3',
+	'../audio/tk/slow_clapping_sound_effect.mp3'
 ];
 
 soundManager.setup({
