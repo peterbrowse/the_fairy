@@ -32,7 +32,14 @@ var audio = [
 	'../audio/tk/trustincash.mp3',
 	'../audio/tk/VeryNice.mp3',
 	'../audio/tk/Waaaaaa.mp3',
-	'../audio/tk/wereoutofbat.mp3'
+	'../audio/tk/wereoutofbat.mp3',
+	'../audio/tk/welcomelonger.mp3',
+	'../audio/tk/WelcomeShorter.mp3',
+	'../audio/tk/Chistmas_is_upon_us.mp3',
+	'../audio/tk/freeyourself.mp3',
+	'../audio/tk/not_now_trev.mp3',
+	'../audio/tk/prochristmas2.mp3',
+	'../audio/tk/timetogoofflist.mp3'
 ];
 
 soundManager.setup({
