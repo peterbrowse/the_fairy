@@ -10,7 +10,29 @@ var audio = [
 	'../audio/duck.mp3',
 	'../audio/ding.mp3',
 	'../audio/lion.mp3',
-	'../audio/pig.mp3'
+	'../audio/pig.mp3',
+	'../audio/tk/beatoothb.mp3',
+	'../audio/tk/cat_alert.mp3',
+	'../audio/tk/drumroll.mp3',
+	'../audio/tk/egycott.mp3',
+	'../audio/tk/n_begood.mp3',
+	'../audio/tk/n_give_osc.mp3',
+	'../audio/tk/n_socks.mp3',
+	'../audio/tk/n_tinselTang.mp3',
+	'../audio/tk/NailedIt.mp3',
+	'../audio/tk/off_guard.mp3',
+	'../audio/tk/off_guard2.mp3',
+	'../audio/tk/onwithlights.mp3',
+	'../audio/tk/p_bequiet2.mp3',
+	'../audio/tk/p_drumoll.mp3',
+	'../audio/tk/p_stilltime.mp3',
+	'../audio/tk/p_verynice.mp3',
+	'../audio/tk/really.mp3',
+	'../audio/tk/suchasurprise.mp3',
+	'../audio/tk/trustincash.mp3',
+	'../audio/tk/VeryNice.mp3',
+	'../audio/tk/Waaaaaa.mp3',
+	'../audio/tk/wereoutofbat.mp3'
 ];
 
 soundManager.setup({
@@ -30,7 +52,7 @@ socket.on('connect', function(data) {
 });
 
 socket.on('command', function(command) {
-	//console.log('Play: ' + command);
+	console.log('Play: ' + command);
 	
 	play_sound(command);
 });
@@ -70,6 +92,7 @@ function preload() {
 	audio.forEach(function(item){
 		var sound_title = item.split('../audio/').join('');
 		sound_title = sound_title.replace('.mp3', '');
+		sound_title = sound_title.replace('tk/', '');
 		
 		loader.add(new PxLoaderSound(sound_title,item));
 	});

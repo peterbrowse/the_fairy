@@ -136,18 +136,20 @@ html, body {
   .content .activate_button {
     margin-top: 60px;
     border: 3px solid #FFFFFF;
-    padding: 20px;
+    padding: 40px;
     display: inline-block; }
 
 .content_controller {
-  padding: 20px; }
-  .content_controller h1 {
-    margin-bottom: 20px; }
+  padding: 40px; }
+  .content_controller h1, .content_controller h2 {
+    margin-bottom: 40px; }
+  .content_controller h2 {
+    margin-top: 40px; }
   .content_controller .item {
     border-radius: 10px;
     background-color: #FFFFFF;
-    margin-bottom: 10px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
     cursor: pointer;
     -webkit-touch-callout: none;
     -webkit-user-select: none;

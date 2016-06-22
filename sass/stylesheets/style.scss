@@ -1,7 +1,7 @@
 $bg-color: #ed1b2e;
 $item_bg_color: #FFFFFF;
 
-$main_padding: 20px;
+$main_padding: 40px;
 
 @import 'reset';
 @import 'type';
@@ -57,8 +57,12 @@ html, body {
 .content_controller {
 	padding: $main_padding;
 	
-	h1 {
+	h1, h2 {
 		margin-bottom: $main_padding;
+	}
+	
+	h2 {
+		margin-top: $main_padding;
 	}
 	
 	.item {
