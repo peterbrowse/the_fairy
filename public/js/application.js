@@ -24,7 +24,7 @@ var audio = [
 	'../audio/tk/off_guard2.mp3',
 	'../audio/tk/onwithlights.mp3',
 	'../audio/tk/p_bequiet2.mp3',
-	'../audio/tk/p_drumoll.mp3',
+	'../audio/tk/p_drumroll.mp3',
 	'../audio/tk/p_stilltime.mp3',
 	'../audio/tk/p_verynice.mp3',
 	'../audio/tk/really.mp3',
